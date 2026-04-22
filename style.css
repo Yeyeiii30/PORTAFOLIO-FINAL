@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; 
+    transition: opacity 1s ease, visibility 1s;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    
+    z-index: -2;
+    filter: brightness(0.5) blur(3px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.hero.ocultar {
+    opacity: 0;
+    visibility: hidden;
+}
+
+button {
+    padding: 15px 25px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #38bdf8;
+}
+
+#portafolio {
+    padding: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+#portafolio.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.oculto {
+    display: none;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #38bdf8;
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    color: #38bdf8;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+.footer {
+    background: #020617;
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.footer .social {
+    margin: 15px 0;
+}
+
+.footer .social a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #38bdf8;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.footer .social a:hover {
+    color: white;
+    text-shadow: 0 0 10px #38bdf8;
+}
+
+/* FRASE */
+.footer .frase {
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero h2 {
+        font-size: 1.2em;
+    }
+
+    .hero p {
+        font-size: 0.95em;
+        padding: 0 10px;
+    }
+
+    .hero-content {
+        padding: 0 15px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero h2 {
+        font-size: 1em;
+    }
+
+    .titulo {
+        font-size: 1.8em;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
